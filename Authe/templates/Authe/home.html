@@ -1,0 +1,14 @@
+{% extends 'Authe/base.html' %}
+
+{% block content %}
+
+<h1 class=text-center>User Authentication With Django</h1>
+
+	{% if user.is_authenticated %}
+		<p>Name: {{ user.first_name }} {{ user.last_name }}</p>
+		<p>Username: {{ user.username }} </p>
+		<p>Email: {{ user.email }}</p>
+	{% endif %}
+
+
+{% endblock %}
